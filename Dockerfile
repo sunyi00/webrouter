@@ -7,7 +7,7 @@ RUN echo "deb http://nginx.org/packages/mainline/ubuntu/ trusty nginx" >> /etc/a
 ENV NGINX_VERSION 1.9.0-1~trusty
 
 RUN apt-get update && \
-    apt-get install -y ca-certificates nginx=${NGINX_VERSION} && \
+    apt-get install -y ca-certificates nginx=${NGINX_VERSION} supervisor && \
     rm -rf /var/lib/apt/lists/*
 
 # forward request and error logs to docker log collector
